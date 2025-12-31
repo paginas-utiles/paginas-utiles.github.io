@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadoras Online Modernas y Completas</title>
+  <meta name="description" content="Calculadoras online modernas y completas: sueldo neto, IRPF, finiquito, paro, ahorro, calorías e inversiones. Gratis y fáciles.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9737377514381702"
+     crossorigin="anonymous"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero-advanced">
+  <div class="hero-bg"></div>
+
+  <div class="hero-inner">
+    <span class="hero-pill">🧮 Calculadoras inteligentes · Gratis</span>
+
+    <h1>
+      Calculadoras online <span>modernas</span><br>
+      para decisiones reales
+    </h1>
+
+    <p>
+      Calcula sueldos, impuestos, ahorro, calorías e inversiones
+      con herramientas completas, rápidas y fáciles de usar.
+    </p>
+
+    <div class="hero-stats">
+      <div>
+        <strong>+15</strong>
+        <span>Calculadoras</span>
+      </div>
+      <div>
+        <strong>100%</strong>
+        <span>Gratis</span>
+      </div>
+      <div>
+        <strong>Sin</strong>
+        <span>Registros</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="container">
+
+  <!-- Cada calculadora es una CARD PRO -->
+  <!-- SUELDO -->
+  <section class="card glass">
+    <h2>💼 Sueldo Neto</h2>
+    <p class="desc">Calcula tu sueldo real con impuestos y pagas.</p>
+
+    <input id="sn_bruto" type="number" placeholder="Salario bruto anual (€)">
+    <input id="sn_irpf" type="number" placeholder="IRPF (%)">
+    <input id="sn_ss" type="number" placeholder="Cotización SS (%)">
+    <select id="sn_pagas">
+      <option value="12">12 pagas</option>
+      <option value="14">14 pagas</option>
+    </select>
+
+    <button onclick="calcularSueldo()">Calcular</button>
+    <div class="resultado" id="sn_resultado"></div>
+  </section>
+
+  <!-- FINIQUITO -->
+  <section class="card glass">
+    <h2>📄 Finiquito</h2>
+    <p class="desc">Calcula lo que te corresponde al terminar un contrato.</p>
+
+    <input id="fin_salario" type="number" placeholder="Salario diario (€)">
+    <input id="fin_dias" type="number" placeholder="Días trabajados">
+    <input id="fin_vacaciones" type="number" placeholder="Vacaciones pendientes">
+
+    <button onclick="calcularFiniquito()">Calcular</button>
+    <div class="resultado" id="fin_resultado"></div>
+  </section>
+
+  <!-- IRPF -->
+  <section class="card glass">
+    <h2>📊 IRPF</h2>
+    <p class="desc">Estimación rápida del IRPF anual.</p>
+
+    <input id="irpf_ingresos" type="number" placeholder="Ingresos anuales (€)">
+    <input id="irpf_pct" type="number" placeholder="% IRPF">
+
+    <button onclick="calcularIRPF()">Calcular</button>
+    <div class="resultado" id="irpf_resultado"></div>
+  </section>
+
+  <!-- PARO -->
+  <section class="card glass">
+    <h2>🧾 Paro</h2>
+    <p class="desc">Calcula tu prestación por desempleo.</p>
+
+    <input id="paro_base" type="number" placeholder="Base reguladora mensual (€)">
+    <select id="paro_mes">
+      <option value="0.7">Primeros 6 meses</option>
+      <option value="0.5">Resto</option>
+    </select>
+
+    <button onclick="calcularParo()">Calcular</button>
+    <div class="resultado" id="paro_resultado"></div>
+  </section>
+
+  <!-- INTERÉS COMPUESTO -->
+  <section class="card glass">
+    <h2>📈 Interés Compuesto</h2>
+    <p class="desc">Descubre cómo crece tu dinero con el tiempo.</p>
+
+    <input id="comp_capital" type="number" placeholder="Capital inicial (€)">
+    <input id="comp_aporte" type="number" placeholder="Aporte mensual (€)">
+    <input id="comp_interes" type="number" placeholder="Interés anual (%)">
+    <input id="comp_anos" type="number" placeholder="Años">
+
+    <button onclick="calcularCompuesto()">Calcular</button>
+    <div class="resultado" id="comp_resultado"></div>
+  </section>
+
+  <!-- CALORÍAS -->
+  <section class="card glass">
+    <h2>🔥 Calorías</h2>
+    <p class="desc">Calcula tu gasto calórico diario.</p>
+
+    <input id="cal_peso" type="number" placeholder="Peso (kg)">
+    <input id="cal_altura" type="number" placeholder="Altura (cm)">
+    <input id="cal_edad" type="number" placeholder="Edad">
+    <select id="cal_actividad">
+      <option value="1.2">Sedentario</option>
+      <option value="1.55">Activo</option>
+      <option value="1.8">Muy activo</option>
+    </select>
+
+    <button onclick="calcularCalorias()">Calcular</button>
+    <div class="resultado" id="cal_resultado"></div>
+  </section>
+
+  <!-- AHORRO -->
+  <section class="card glass">
+    <h2>💰 Ahorro Mensual</h2>
+    <p class="desc">Controla tus finanzas mensuales.</p>
+
+    <input id="ah_ingresos" type="number" placeholder="Ingresos mensuales (€)">
+    <input id="ah_gastos" type="number" placeholder="Gastos mensuales (€)">
+
+    <button onclick="calcularAhorro()">Calcular</button>
+    <div class="resultado" id="ah_resultado"></div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 · Calculadoras Online Modernas
+</footer>
+
+<script src="js/calculators.js"></script>
+</body>
+</html>
